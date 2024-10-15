@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap</title>
+  <!-- Include Foundation CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Section 1: Animated Flip Cards -->
+  <section class="card-section">
+    <div class="grid-container">
+      <h2 class="section-title">Stunning Flip Cards with Gradient Backgrounds</h2>
+      <div class="grid-x grid-margin-x">
+        <div class="cell medium-4">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front primary-card">
+                <h3>Primary Color</h3>
+              </div>
+              <div class="flip-card-back">
+                <p>This card uses a primary gradient background with a flip effect on hover.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell medium-4">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front secondary-card">
+                <h3>Secondary Color</h3>
+              </div>
+              <div class="flip-card-back">
+                <p>This card flips to reveal the description in the secondary gradient background.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cell medium-4">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front success-card">
+                <h3>Success Color</h3>
+              </div>
+              <div class="flip-card-back">
+                <p>A smooth success gradient card with a unique hover flip effect.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Buttons with Animated Hover Effects -->
+  <section class="button-section">
+    <div class="grid-container">
+      <h2 class="section-title">Interactive Buttons with Hover and Disabled States</h2>
+      <div class="button-group">
+        <a href="#" class="button fancy-button slide-in-right primary-btn">Primary Button</a>
+        <a href="#" class="button fancy-button slide-in-right secondary-btn">Secondary Button</a>
+        <a href="#" class="button fancy-button slide-in-right success-btn">Success Button</a>
+        <!-- Disabled Button -->
+        <a href="#" class="button fancy-button disabled-btn" tabindex="-1" aria-disabled="true">Disabled Button</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section with Enhanced Design -->
+  <footer class="footer">
+    <div class="grid-container">
+      <div class="footer-content">
+        <h3>Stay Connected</h3>
+        <p>Follow us on social media or drop us a message!</p>
+      
+        <p class="footer-note">© 2024 Elegant Footer Design. Crafted with creativity.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Include Foundation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites/dist/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
