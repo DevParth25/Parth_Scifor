@@ -1,0 +1,169 @@
+/* Card Styles */
+.custom-card {
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Primary Card */
+.card-primary {
+    background-color: #0d6efd;
+    color: #fff;
+    animation: slide-in-left 1s ease-in-out;
+}
+.card-primary:hover {
+    animation: pulse 0.6s infinite;
+}
+
+/* Success Card */
+.card-success {
+    background-color: #198754;
+    color: #fff;
+    animation: fade-in 1.2s ease-in;
+}
+.card-success:hover {
+    animation: bounce 1s ease-in-out;
+}
+
+/* Danger Card */
+.card-danger {
+    background-color: #dc3545;
+    color: #fff;
+    animation: zoom-in 1s ease-in-out;
+}
+.card-danger:hover {
+    animation: shake 0.5s;
+}
+
+/* Info Card */
+.card-info {
+    background-color: #0dcaf0;
+    color: #fff;
+    animation: rotate-in 1.5s ease;
+}
+.card-info:hover {
+    animation: rotate 1s infinite;
+}
+
+/* Warning Card */
+.card-warning {
+    background-color: #ffc107;
+    color: #fff;
+    animation: slide-in-right 1s ease-in-out;
+}
+.card-warning:hover {
+    animation: glow 0.6s infinite;
+}
+
+/* Button Style */
+.button {
+    transition: background-color 0.3s, transform 0.3s;
+}
+.button:hover {
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate-in {
+    0% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0px 0px 10px #ffd700;
+    }
+    50% {
+        box-shadow: 0px 0px 30px #ffd700;
+    }
+    100% {
+        box-shadow: 0px 0px 10px #ffd700;
+    }
+}
