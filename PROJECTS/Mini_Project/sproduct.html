@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce-Website</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shope</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" id="shopping-bag"><i class="fas fa-shopping-cart"></i></a></li>
+                <a href="#" id="close-icon"><i class="fas fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile-menu">
+            <a href="cart.html"> <i class="fas fa-shopping-cart"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="pro-details" class="section-p1">
+        <div id="single-pro-image">
+            <img src="img/products/f1.jpg" width="100%" id="MainImg" alt="">
+            <div class="small-img-group">
+                <div class="small-img-colum">
+                    <img src="img/products/f1.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-colum">
+                    <img src="img/products/f2.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-colum">
+                    <img src="img/products/f3.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-colum">
+                    <img src="img/products/f4.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-colum">
+                    <img src="img/products/f5.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-colum">
+                    <img src="img/products/f7.jpg" width="100%" class="small-img" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // Select the main image and all small images
+            var MainImg = document.getElementById("MainImg");
+            var smallImgs = document.getElementsByClassName("small-img");
+        
+            // Loop through each small image and add a click event listener
+            for (var i = 0; i < smallImgs.length; i++) {
+                smallImgs[i].onclick = function() {
+                    // Change the src of the MainImg to the clicked small image's src
+                    MainImg.src = this.src;
+                }
+            }
+        </script>
+        
+        <div class="single-pro-details">
+            <h6>Home / T-shirt</h6>
+            <h4>Men's Fashion T shirt</h4>
+            <h2>$135.00</h2>
+            <select>
+                <option>Select Size</option>
+                <option>XL</option>
+                <option>XXL</option>
+                <option>Small</option>
+                <option>Large</option>
+            </select>
+            <input type="number" value="1">
+            <button class="normal">Add To Card</button>
+            <h4>Product Details</h4>
+            <span>Good t-shirt designs are those that people want to wear. Make sure your t-shirt doesn’t
+                 get stuffed in the back of the closet with a custom detailed t-shirt designed just for 
+                 you by a professional designer. Need ideas? We’ve collected some amazing examples of detailed 
+                 t-shirts created by our global community of designers. Get inspired and start planning your 
+                 custom detailed t-shirt design today.</span>
+        </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+        <h2>Featured Products</h2>
+        <p>Summer collection New Morden Design</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="img/products/n1.jpg" alt="">
+                <div class="desciption">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart shopping-icon"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/n2.jpg" alt="">
+                <div class="desciption">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart shopping-icon"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/n3.jpg" alt="">
+                <div class="desciption">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart shopping-icon"></i></a>
+            </div>
+            <div class="pro">
+                <img src="img/products/n4.jpg" alt="">
+                <div class="desciption">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart shopping-icon"></i></a>
+            </div>  
+            <div class="pro">
+                <img src="img/products/n5.jpg" alt="">
+                <div class="desciption">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart shopping-icon"></i></a>
+            </div>  
+            <div class="pro">
+                <img src="img/products/n6.jpg" alt="">
+                <div class="desciption">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart shopping-icon"></i></a>
+            </div>  
+            <div class="pro">
+                <img src="img/products/n7.jpg" alt="">
+                <div class="desciption">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart shopping-icon"></i></a>
+            </div>  
+            <div class="pro">
+                <img src="img/products/n8.jpg" alt="">
+                <div class="desciption">
+                    <span>Adidas</span>
+                    <h5>Cartoon Astronaut T-shirts</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>$78</h4>
+                </div>
+                <a href="#"><i class="fas fa-shopping-cart shopping-icon"></i></a>
+            </div>  
+
+        </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+          <h4>Sign Up For Newsletters</h4>
+          <p>
+            Get E-mail updates about our latest shop and
+            <span>special offers</span>
+          </p>
+        </div>
+        <div class="form">
+          <input type="text" placeholder="Your email address" id="email-input" />
+          <button class="submit-email normal">Sign up</button>
+        </div>
+        <!-- Confetti container -->
+        <div id="confetti-container"></div>
+      </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Palladium , Ahmedabad</p>
+            <p><strong>Phone:</strong> (+91)3319197112, (+91)772723284</p>
+            <p><strong>Hours:</strong> 10:00am-10:00pm Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Term & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div><div class="col">
+            <h4>My Account</h4>
+            <a href="login.html">sign in</a>
+            <a href="#">view cart</a>
+            <a href="#">my wishlist</a>
+            <a href="#">track my order</a>
+            <a href="#">help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Stor or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+      
+
+    </footer>
+    <script src="main.js"></script>
+
+
+    <script>
+        document
+          .querySelector(".submit-email")
+          .addEventListener("click", function () {
+            const emailInput = document.getElementById("email-input");
+  
+            if (emailInput.value.trim() !== "") {
+              const confettiContainer =
+                document.getElementById("confetti-container");
+  
+              // Clear any previous confetti
+              confettiContainer.innerHTML = "";
+  
+              // Create 50 confetti elements
+              for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement("div");
+                confetti.classList.add("confetti");
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.animationDelay = `${Math.random() * 1.5}s`;
+                confetti.style.backgroundColor = getRandomColor();
+  
+                confettiContainer.appendChild(confetti);
+  
+                confetti.addEventListener("animationend", () => {
+                  confetti.remove();
+                });
+              }
+  
+              emailInput.value = ""; // Clear the email input
+            }
+          });
+  
+        function getRandomColor() {
+          const colors = [
+            "#FF5733",
+            "#FF33A1",
+            "#FFDB27",
+            "#FF69B4",
+            "#33FF57",
+            "#3357FF",
+            "#FFD700",
+            "#FF4500",
+            "#ADFF2F",
+            "#FF6347",
+            "#FF1493",
+            "#32CD32",
+            "#FFB6C1",
+            "#FF8C00",
+            "#00BFFF",
+            "#FF00FF",
+          ];
+          return colors[Math.floor(Math.random() * colors.length)];
+        }
+      </script>
+
+      
+</body>
+</html>
