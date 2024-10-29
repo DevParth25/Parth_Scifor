@@ -1,0 +1,27 @@
+/* Custom styles for the table, if needed */
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1; /* Custom hover effect */
+}
+
+/* Specific row styles */
+.default { background-color: #f8f9fa; color: #333; }
+.primary { background-color: #dbe7ff; color: #0d6efd; }
+.secondary { background-color: #f0f0f5; color: #6c757d; }
+.success { background-color: #d2f4d2; color: #28a745; }
+.danger { background-color: #ffd6d9; color: #dc3545; }
+.warning { background-color: #fff4c2; color: #ffc107; }
+.info { background-color: #d0f4fc; color: #17a2b8; }
+.light { background-color: #fcfcfc; color: #adb5bd; }
+.dark { background-color: #e1e1e1; color: #343a40; }
+
+/* Additional styles for table cells */
+.table tbody td {
+    text-align: center; /* Center align cells */
+}
+
+/* Overall body styling */
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: #fff;
+    font-family: Arial, sans-serif;
+}

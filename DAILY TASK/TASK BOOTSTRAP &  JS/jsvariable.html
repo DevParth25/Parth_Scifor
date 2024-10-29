@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #141E30, #243B55);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 20px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>JavaScript Variable Example</h1>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        // Declare variables
+        var name = "John";
+        var lastname = "Doe";
+        var email = "john.doe@example.com";
+        var age = 30;
+
+        // Print the variables
+        var output = "<p><strong>Name:</strong> " + name + "</p>" +
+                     "<p><strong>Last Name:</strong> " + lastname + "</p>" +
+                     "<p><strong>Email:</strong> " + email + "</p>" +
+                     "<p><strong>Age:</strong> " + age + "</p>";
+
+        // Display the output in the HTML
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+</html>
