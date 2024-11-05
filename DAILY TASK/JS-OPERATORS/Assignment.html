@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operators</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2b2d42, #8d99ae);
+            color: #edf2f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container styling */
+        .container {
+            background-color: #3a3d55;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+            width: 320px;
+            text-align: center;
+        }
+
+        /* Heading style */
+        h2 {
+            color: #ef233c;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* Result text style */
+        .result {
+            background-color: #4a4e69;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #edf2f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Assignment Operators</h2>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        // Declare a variable
+        let x = 10;
+        let y = 5;
+
+        // Store results in a variable and use assignment operators
+        let result = x;  // start with x's initial value
+
+        // Perform assignment operations
+        result += y;  // result = result + y
+        const additionResult = result;
+
+        result -= y;  // result = result - y
+        const subtractionResult = result;
+
+        result *= y;  // result = result * y
+        const multiplicationResult = result;
+
+        result /= y;  // result = result / y
+        const divisionResult = result;
+
+        result %= y;  // result = result % y
+        const modulusResult = result;
+
+        // Display results in HTML
+        document.getElementById("results").innerHTML = `
+            <div class="result">Initial x: ${x}</div>
+            <div class="result">y: ${y}</div>
+            <div class="result">x += y: ${additionResult}</div>
+            <div class="result">x -= y: ${subtractionResult}</div>
+            <div class="result">x *= y: ${multiplicationResult}</div>
+            <div class="result">x /= y: ${divisionResult}</div>
+            <div class="result">x %= y: ${modulusResult}</div>
+        `;
+
+        // Output results in console
+        console.log("Initial x:", x);
+        console.log("y:", y);
+        console.log("x += y:", additionResult);
+        console.log("x -= y:", subtractionResult);
+        console.log("x *= y:", multiplicationResult);
+        console.log("x /= y:", divisionResult);
+        console.log("x %= y:", modulusResult);
+    </script>
+</body>
+</html>
