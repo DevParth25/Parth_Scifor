@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithmetic Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #1f1c2c, #928dab);
+        color: #ffffff;
+      }
+
+      .calculator {
+        background: #2c2f33;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        width: 300px;
+      }
+
+      .calculator h1 {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        color: #ffffff;
+      }
+
+      .calculator input,
+      .calculator select,
+      .calculator button {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 1em;
+        width: 100%;
+        border: 1px solid #555;
+        border-radius: 5px;
+        background-color: #23272a;
+        color: #ffffff;
+      }
+
+      .calculator button {
+        background: linear-gradient(90deg, #007bff, #0056b3);
+        border: none;
+        cursor: pointer;
+      }
+
+      .calculator button:hover {
+        background: linear-gradient(90deg, #0056b3, #007bff);
+      }
+
+      .calculator p {
+        margin-top: 15px;
+        font-size: 1.2em;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>Arithmetic Calculator</h1>
+      <input id="number1" type="number" placeholder="Enter first number" />
+      <select id="operator">
+        <option value="+">Addition (+)</option>
+        <option value="-">Subtraction (-)</option>
+        <option value="*">Multiplication (*)</option>
+        <option value="/">Division (/)</option>
+      </select>
+
+      <input id="number2" type="number" placeholder="Enter second number" />
+      <button onclick="calculate()">Calculate</button>
+      <p id="result">Result:</p>
+    </div>
+
+    <script>
+      function calculate() {
+        // Get input values
+        const num1 = parseFloat(document.getElementById("number1").value);
+        const operator = document.getElementById("operator").value;
+        const num2 = parseFloat(document.getElementById("number2").value);
+
+        let result;
+
+        // Perform calculation based on the operator
+        if (operator === "+") {
+          result = num1 + num2;
+        } else if (operator === "-") {
+          result = num1 - num2;
+        } else if (operator === "*") {
+          result = num1 * num2;
+        } else if (operator === "/") {
+          if (num2 !== 0) {
+            result = num1 / num2;
+          } else {
+            result = "Error: Division by zero";
+          }
+        } else {
+          result = "Error: Invalid operator";
+        }
+
+        // Display the result
+        const operationName = {
+          "+": "Addition",
+          "-": "Subtraction",
+          "*": "Multiplication",
+          "/": "Division",
+        };
+
+        const operation = operationName[operator];
+        document.getElementById(
+          "result"
+        ).textContent = `Result of ${operation}: ${result}`;
+      }
+    </script>
+  </body>
+</html>
