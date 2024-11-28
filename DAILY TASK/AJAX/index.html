@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #00838f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin-top: 20px;
+            font-size: 16px;
+            background-color: #006064;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #004d4f;
+        }
+
+        main {
+            padding: 30px;
+            text-align: center;
+        }
+
+        #content {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #status {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffeb3b;
+            color: #ff6f00;
+            border: 1px solid #f57c00;
+            border-radius: 6px;
+            display: none;
+        }
+    </style>
+    <script>
+        function loadAboutPage() {
+            const xhr = new XMLHttpRequest();
+            const statusDiv = document.getElementById('status');
+            const contentDiv = document.getElementById('content');
+
+            xhr.open('GET', 'about.html', true);
+
+            xhr.onreadystatechange = function () {
+                statusDiv.style.display = 'block';
+                statusDiv.innerText = `ReadyState: ${xhr.readyState}`;
+
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    contentDiv.innerHTML = xhr.responseText;
+                    statusDiv.style.display = 'none';
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Website!</h1>
+        <button onclick="loadAboutPage()">Learn More About Us</button>
+    </header>
+    <main>
+        <p>Click the button above to discover more about our mission and team!</p>
+        <div id="content">
+            <p>We are passionate about creating innovative solutions for modern challenges. Our team is dedicated to bringing the best ideas to life!</p>
+        </div>
+    </main>
+    <div id="status"></div>
+</body>
+</html>
