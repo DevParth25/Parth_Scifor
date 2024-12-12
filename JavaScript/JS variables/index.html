@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: var, let, const</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript: var, let, const Examples</h1>
+
+    <div class="container">
+        <button onclick="testVar()">Test var</button>
+        <button onclick="testLet()">Test let</button>
+        <button onclick="testConst()">Test const</button>
+
+        <div id="output">Click a button to see the result.</div>
+    </div>
+
+    <script>
+        function testVar() {
+            var x = 10;
+            if (true) {
+                var x = 20; // Same variable, redefined
+            }
+            document.getElementById("output").innerHTML = "<strong>var</strong>: The value of x is " + x + " (var is function-scoped).";
+        }
+
+        function testLet() {
+            let y = 10;
+            if (true) {
+                let y = 20; // Block-scoped variable
+            }
+            document.getElementById("output").innerHTML = "<strong>let</strong>: The value of y is " + y + " (let is block-scoped).";
+        }
+
+        function testConst() {
+            const z = 10;
+            try {
+                z = 20; // Trying to reassign const
+            } catch (e) {
+                document.getElementById("output").innerHTML = "<strong>const</strong>: Error - " + e.message + " (const cannot be reassigned).";
+            }
+        }
+    </script>
+
+</body>
+</html>
