@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Showcase</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb);
+      background-size: 200% 200%;
+      animation: gradientBG 6s ease infinite;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      color: #ffffff;
+    }
+
+    /* Product Container */
+    .data-container {
+      max-width: 1200px;
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .data-item {
+      background: #ffffff;
+      color: #333;
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .data-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .data-item img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 2px solid #fbc2eb;
+    }
+
+    .data-item h3 {
+      margin: 10px 0 5px;
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .data-item p {
+      margin: 5px 0;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .data-item .price {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #ff758c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Product Showcase</h1>
+  <div id="data-container" class="data-container"></div>
+
+  <script>
+    /**
+     * Fetch product data from DummyJSON API and display it.
+     */
+    async function fetchProducts() {
+      try {
+        const apiUrl = 'https://dummyjson.com/products'; // DummyJSON Products API
+        const response = await fetch(apiUrl);
+
+        // Validate response
+        if (!response.ok) {
+          throw new Error(`Failed to fetch data: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const products = data.products;
+
+        // Log the fetched data
+        console.log('Fetched Products:', products);
+
+        // Select the container
+        const container = document.getElementById('data-container');
+
+        // Render products with images and details
+        container.innerHTML = products
+          .slice(0, 12) // Display only 12 products for simplicity
+          .map(
+            product => `
+            <div class="data-item">
+              <img src="${product.thumbnail}" alt="${product.title}">
+              <h3>${product.title}</h3>
+              <p>${product.category}</p>
+              <p class="price">$${product.price.toFixed(2)}</p>
+              <p>Rating: ⭐${product.rating}</p>
+            </div>
+          `
+          )
+          .join('');
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    }
+
+    // Fetch products on page load
+    fetchProducts();
+  </script>
+</body>
+</html>

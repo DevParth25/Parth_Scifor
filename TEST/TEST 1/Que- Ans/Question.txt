@@ -1,0 +1,69 @@
+1. What is HTML?
+
+Ans : HTML (HyperText Markup Language) 🌐 is the standard language used to create and structure content on the web. It forms the backbone of every webpage, allowing developers to define elements like text, images, links, and multimedia content. HTML uses a system of tags 📑 to organize and display content in a meaningful way in web browsers.
+
+2. What are HTML Tags?
+
+Ans : HTML tags are the building blocks 🧱 of HTML documents. They are enclosed in angle brackets (e.g., <tag>), usually coming in pairs with an opening tag (e.g., <p>) and a closing tag (e.g., </p>). Tags define the structure and format of different elements on a webpage, such as headings (<h1> to <h6>), paragraphs (<p>), images (<img>), links (<a>), and more.
+
+  -  HTML tags are used to define the structure and content of a webpage. They tell the browser how to display elements. Most tags have an opening tag and a closing tag, with content placed in between.
+
+
+Description of Key HTML Tags in the Example:
+
+	<!DOCTYPE html>: Declares the document type as HTML5 📄.
+	<html>: The root element of an HTML document 🌐.
+	<head>: Contains metadata about the webpage, such as the title and character encoding ⚙️.
+	<title>: Sets the title of the page displayed on the browser tab 📌.
+	<body>: Contains the visible content of the webpage 🖥️.
+	<h1> to <h6>: Heading tags, where <h1> is the largest and most important 🏆.
+	<p>: Defines a paragraph of text 📝.
+	<img>: Embeds an image 🖼️.
+	<a>: Defines a hyperlink 🔗.
+	<ul> and <ol>: Defines unordered (bulleted) and ordered (numbered) lists, respectively 📋.
+	<li>: Defines list items ✔️.
+
+
+
+
+Example Program:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Page with Emojis</title>
+</head>
+<body>
+
+    <!-- Heading Tag -->
+    <h1>Welcome to My Webpage 🌐</h1>
+
+    <!-- Paragraph Tag -->
+    <p>This is a simple webpage made using HTML. It contains various HTML elements and emojis 🎉.</p>
+
+    <!-- Image Tag -->
+    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+
+    <!-- Link Tag -->
+    <p>Click here to visit 🌍 <a href="https://www.example.com">Example Website</a>.</p>
+
+    <!-- Unordered List Tag -->
+    <h2>Things I Like:</h2>
+    <ul>
+        <li>HTML 💻</li>
+        <li>CSS 🎨</li>
+        <li>JavaScript ⚙️</li>
+    </ul>
+
+    <!-- Ordered List Tag -->
+    <h2>Steps to Build a Webpage:</h2>
+    <ol>
+        <li>Write HTML 📝</li>
+        <li>Add CSS for styling 🎨</li>
+        <li>Use JavaScript for interactivity 🚀</li>
+    </ol>
+
+</body>
+</html>
