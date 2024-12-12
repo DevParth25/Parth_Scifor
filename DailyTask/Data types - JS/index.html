@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primitive Data Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+        .output {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Primitive Data Types in JavaScript</h1>
+    <div id="output" class="output"></div>
+
+    <script>
+        // Declaring variables of each primitive data type with specific names
+        let userName = "John Doe";                           // String: User's name
+        let userAge = 30;                                   // Number: User's age
+        let isMember = true;                                // Boolean: Membership status
+        let userBalance = null;                             // Null: User's balance (not set)
+        let lastLogin;                                      // Undefined: Last login date (not set)
+        let favoriteColor = Symbol('favoriteColor');        // Symbol: Unique color identifier
+        let userScore = BigInt(100000000000);               // BigInt: User's score
+        let userFeedback = "Great experience!";              // Another String: Feedback
+        let hasSubscription = false;                        // Another Boolean: Subscription status
+
+        // Function to display types in the console
+        function displayType(variableName, variable) {
+            const message = `${variableName} is of type: ${typeof variable}`;
+            console.log(message);
+        }
+
+        // Displaying types in the console
+        displayType('userName', userName);
+        displayType('userAge', userAge);
+        displayType('isMember', isMember);
+        displayType('userBalance', userBalance);
+        displayType('lastLogin', lastLogin);
+        displayType('favoriteColor', favoriteColor);
+        displayType('userScore', userScore);
+        displayType('userFeedback', userFeedback);
+        displayType('hasSubscription', hasSubscription);
+    </script>
+</body>
+</html>

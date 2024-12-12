@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a57);
+            color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container styling */
+        .container {
+            background-color: #282a36;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            text-align: center;
+        }
+
+        /* Heading style */
+        h2 {
+            color: #50fa7b;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* Result text style */
+        .result {
+            background-color: #44475a;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #8be9fd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Arithmetic Operations</h2>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        // Declare two variables
+        let num1 = 12;
+        let num2 = 4;
+
+        // Perform arithmetic operations
+        let addition = num1 + num2;
+        let subtraction = num1 - num2;
+        let multiplication = num1 * num2;
+        let division = num1 / num2;
+
+        // Display results in HTML with styled divs
+        document.getElementById("results").innerHTML = `
+            <div class="result">Addition: ${num1} + ${num2} = ${addition}</div>
+            <div class="result">Subtraction: ${num1} - ${num2} = ${subtraction}</div>
+            <div class="result">Multiplication: ${num1} * ${num2} = ${multiplication}</div>
+            <div class="result">Division: ${num1} / ${num2} = ${division}</div>
+        `;
+
+        // Output results in console
+        console.log("Addition:", addition);
+        console.log("Subtraction:", subtraction);
+        console.log("Multiplication:", multiplication);
+        console.log("Division:", division);
+    </script>
+</body>
+</html>

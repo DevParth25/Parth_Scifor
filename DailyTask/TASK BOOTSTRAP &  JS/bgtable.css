@@ -1,0 +1,12 @@
+/* Custom styles for the table, if needed */
+.table tbody tr:hover {
+    background-color: #f1f1f1; /* Custom hover effect */
+}
+
+.table td {
+    font-size: 1em; /* Adjust font size as needed */
+}
+
+.table th {
+    text-align: center; /* Center align headers */
+}

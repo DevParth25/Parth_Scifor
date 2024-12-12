@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async and await</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #a8e6cf, #dcedc1); 
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            height: 100vh;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fetch To-Do Example</h1>
+    <button onclick="fetchTodo()">Fetch To-Do</button>
+
+    <script>
+        async function fetchTodo() {
+            const url = 'https://jsonplaceholder.typicode.com/todos/1'; 
+            try {
+                const response = await fetch(url); // Fetch data from the URL
+                const todoData = await response.json(); // Parse JSON data
+                console.log(todoData); // Log the fetched data to the console
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+    </script>
+</body>
+</html>

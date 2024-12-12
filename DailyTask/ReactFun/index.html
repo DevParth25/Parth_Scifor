@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Function</title>
+  <!-- React and ReactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel for JSX transpilation -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- CSS for styling -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      padding: 20px;
+    }
+    h1 {
+      color: #2a2a72;
+      font-size: 2.5em;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #555;
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 60%;
+      margin: auto;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #2a2a72;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4b4b8d;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    // Functional Component with a button and conditional rendering
+    const MyComponent = () => {
+      // State to manage the visibility of the content
+      const [showContent, setShowContent] = React.useState(false);
+
+      // Function to toggle the visibility of the content
+      const toggleContent = () => {
+        setShowContent(!showContent);
+      };
+
+      return (
+        <div className="container">
+          <button onClick={toggleContent}>
+            {showContent ? 'Hide Content' : 'Show Content'}
+          </button>
+
+          {showContent && (
+            <div>
+              <h1>React is Awesome!</h1>
+              <p>This is a simple example where we toggle the display of the heading and paragraph using React state.</p>
+              <p>Click the button to show or hide this content dynamically. React allows us to conditionally render elements based on state, making our UIs interactive!</p>
+            </div>
+          )}
+        </div>
+      );
+    };
+
+    // Render the component using ReactDOM.render (for React 17)
+    ReactDOM.render(<MyComponent />, document.getElementById('root'));
+  </script>
+</body>
+</html>
