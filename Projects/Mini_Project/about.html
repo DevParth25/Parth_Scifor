@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce-Website</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"><img src="img/logo.png" class="logo" alt="" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shope</a></li>
+          <li><a class="active" href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="cart.html" id="shopping-bag"
+              ><i class="fas fa-shopping-cart"></i
+            ></a>
+          </li>
+          <a href="#" id="close-icon"><i class="fas fa-times"></i></a>
+        </ul>
+      </div>
+      <div id="mobile-menu">
+        <a href="cart.html"> <i class="fas fa-shopping-cart"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+      <h2>#knowUs</h2>
+      <p>Lorem ipsum dolor sit amet, Consectetur</p>
+    </section>
+
+    <section id="about-head" class="section-p1">
+      <img src="img/about/a6.jpg" alt="" />
+      <div class="about-details">
+        <h2>Who We Are?</h2>
+        <p>
+          Today, it’s easier than ever for anyone to set up an eCommerce
+          business. At its most basic, you only need to create an online store
+          on an all-in-one platform like Wix eCommerce, and you can start
+          selling products or services anywhere in the world. If you’re new to
+          eCommerce, you’ve come to the right place. This article will answer
+          all of your questions:
+        </p>
+        <!-- New Content Here -->
+        <p>
+          We are a passionate team of entrepreneurs and developers who aim to
+          make online selling accessible to everyone. Our platform provides all
+          the necessary tools and support for businesses to grow and thrive in a
+          competitive online market. Whether you're starting your first shop or
+          scaling an existing business, we help you achieve success at every
+          step.
+        </p>
+        <p>
+          Our mission is to empower individuals and businesses alike with
+          innovative solutions to create an impactful online presence. With our
+          intuitive interface and robust support, you can focus on building your
+          brand while we take care of the technical details.
+        </p>
+      </div>
+    </section>
+
+    <section id="about-app" class="section-p1">
+      <h1>Download Our <a href="#">App</a></h1>
+      <div class="video" onclick="toggleVideo()">
+        <video id="video" autoplay loop>
+          <source src="img/about/cara-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <section id="feature" class="section-p1">
+      <div class="feature-box">
+        <img src="img/features/f1.png" alt="" />
+        <h6>Free Shopping</h6>
+      </div>
+      <div class="feature-box">
+        <img src="img/features/f2.png" alt="" />
+        <h6>Online Order</h6>
+      </div>
+      <div class="feature-box">
+        <img src="img/features/f3.png" alt="" />
+        <h6>Save Money</h6>
+      </div>
+      <div class="feature-box">
+        <img src="img/features/f4.png" alt="" />
+        <h6>Promotions</h6>
+      </div>
+      <div class="feature-box">
+        <img src="img/features/f5.png" alt="" />
+        <h6>Happy Sell</h6>
+      </div>
+      <div class="feature-box">
+        <img src="img/features/f6.png" alt="" />
+        <h6>F24/7 Support</h6>
+      </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>
+          Get E-mail updates about our latest shop and
+          <span>special offers</span>
+        </p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Your email address" id="email-input" />
+        <button class="submit-email normal">Sign up</button>
+      </div>
+      <!-- Confetti container -->
+      <div id="confetti-container"></div>
+    </section>
+
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="img/logo.png" alt="" />
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> Palladium , Ahmedabad</p>
+        <p><strong>Phone:</strong> (+91)3319197112, (+91)772723284</p>
+        <p><strong>Hours:</strong> 10:00am-10:00pm Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Term & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="login.html">sign in</a>
+        <a href="#">view cart</a>
+        <a href="#">my wishlist</a>
+        <a href="#">track my order</a>
+        <a href="#">help</a>
+      </div>
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Stor or Google Play</p>
+        <div class="row">
+          <img src="img/pay/app.jpg" alt="" />
+          <img src="img/pay/play.jpg" alt="" />
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="img/pay/pay.png" alt="" />
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+
+    <script>
+      document
+        .querySelector(".submit-email")
+        .addEventListener("click", function () {
+          const emailInput = document.getElementById("email-input");
+
+          if (emailInput.value.trim() !== "") {
+            const confettiContainer =
+              document.getElementById("confetti-container");
+
+            // Clear any previous confetti
+            confettiContainer.innerHTML = "";
+
+            // Create 50 confetti elements
+            for (let i = 0; i < 50; i++) {
+              const confetti = document.createElement("div");
+              confetti.classList.add("confetti");
+              confetti.style.left = `${Math.random() * 100}%`;
+              confetti.style.animationDelay = `${Math.random() * 1.5}s`;
+              confetti.style.backgroundColor = getRandomColor();
+
+              confettiContainer.appendChild(confetti);
+
+              confetti.addEventListener("animationend", () => {
+                confetti.remove();
+              });
+            }
+
+            emailInput.value = ""; // Clear the email input
+          }
+        });
+
+      function getRandomColor() {
+        const colors = [
+          "#FF5733",
+          "#FF33A1",
+          "#FFDB27",
+          "#FF69B4",
+          "#33FF57",
+          "#3357FF",
+          "#FFD700",
+          "#FF4500",
+          "#ADFF2F",
+          "#FF6347",
+          "#FF1493",
+          "#32CD32",
+          "#FFB6C1",
+          "#FF8C00",
+          "#00BFFF",
+          "#FF00FF",
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+    </script>
+
+    <script>
+      function toggleVideo() {
+        const video = document.getElementById("video");
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
+    </script>
+  </body>
+</html>
