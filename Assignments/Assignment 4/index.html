@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break and Continue</title>
+    <style>
+        /* Basic reset and styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .code-box {
+            background: #f8f8f8;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: #555;
+            font-size: 1em;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        .output {
+            display: none;
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            color: #333;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Break vs Continue</h2>
+
+        <!-- Break Example -->
+        <div>
+            <div class="code-box">
+                <pre>
+for (let i = 1; i &lt;= 10; i++) {
+    if (i === 6) {
+        break;
+    }
+    console.log(i);
+}
+                </pre>
+            </div>
+            <button onclick="toggleOutput('breakOutput')">Toggle Break Output</button>
+            <div class="output" id="breakOutput">
+                Number: 1<br>Number: 2<br>Number: 3<br>Number: 4<br>Number: 5<br>Breaking at 6
+            </div>
+        </div>
+
+        <!-- Continue Example -->
+        <div>
+            <div class="code-box">
+                <pre>
+for (let i = 1; i &lt;= 10; i++) {
+    if (i === 6) {
+        continue;
+    }
+    console.log(i);
+}
+                </pre>
+            </div>
+            <button onclick="toggleOutput('continueOutput')">Toggle Continue Output</button>
+            <div class="output" id="continueOutput">
+                Number: 1<br>Number: 2<br>Number: 3<br>Number: 4<br>Number: 5<br>Skipping 6<br>Number: 7<br>Number: 8<br>Number: 9<br>Number: 10
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle the visibility of the output
+        function toggleOutput(outputId) {
+            const output = document.getElementById(outputId);
+            // Toggle the display property between 'none' and 'block'
+            if (output.style.display === "none" || output.style.display === "") {
+                output.style.display = "block"; // Show the output
+            } else {
+                output.style.display = "none"; // Hide the output
+            }
+        }
+    </script>
+
+</body>
+</html>
