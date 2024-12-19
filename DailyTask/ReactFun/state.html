@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Car Component</title>
+  <style>
+    /* CSS Styles */
+    .car-container {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .car-container h1 {
+      color: black;
+      font-size: 24px;
+    }
+
+    .car-container p {
+      color: red;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div> <!-- React will render here -->
+
+  <!-- React and ReactDOM CDNs -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Babel CDN for JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- React Component -->
+  <script type="text/babel">
+    class Car extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          brand: "Ford",
+          model: "Mustang",
+          color: "red",
+          year: 1964,
+        };
+      }
+
+      render() {
+        return (
+          <div className="car-container">
+            <h1>My {this.state.brand}</h1>
+            <p>
+              It is a {this.state.color} {this.state.model} from {this.state.year}.
+            </p>
+          </div>
+        );
+      }
+    }
+
+    // Render the component into the root div
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Car />);
+  </script>
+</body>
+</html>

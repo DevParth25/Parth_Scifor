@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Class Component Example</title>
+    <!-- React and Babel CDN -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- Root element -->
+    <div id="root"></div>
+    
+    <!-- React Script -->
+    <script type="text/babel">
+        // Class Component B
+        class B extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <h3>First Component: {this.props.data}</h3>
+                    </div>
+                );
+            }
+        }
+
+        // Class Component A (Parent Component)
+        class A extends React.Component {
+            render() {
+                const name = "raj";
+                const lname = "ssss";
+                const age = 25;
+
+                return (
+                    <div>
+                        <h1>Hi!</h1>
+                        <B data={`${name} ${lname} ${age}`} />
+                    </div>
+                );
+            }
+        }
+
+        // Render the Parent Component
+        ReactDOM.render(<A />, document.getElementById("root"));
+    </script>
+</body>
+</html>
