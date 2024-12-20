@@ -1,63 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>React UserDetails</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- React and ReactDOM CDN Links -->
-  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <!-- Babel CDN for JSX -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-</head>
-<body>
-  <div id="root"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React UserDetails</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- React and ReactDOM CDN Links -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- Babel CDN for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
 
-  <script type="text/babel">
-    // UserDetails Component
-    const UserDetails = ({ name, age, email, mobileNo, city }) => {
-      return (
-        <div className="user-details-card">
-          <div className="card-header">
-            <h3>{name}</h3>
-            <p>{city}</p>
+    <script type="text/babel">
+      // UserDetails Component
+      const UserDetails = (props) => {
+        return (
+          <div className="user-details-card">
+            <div className="card-header">
+              <h3>{props.name}</h3>
+              <p>{props.city}</p>
+            </div>
+            <div className="card-body">
+              <p>
+                <strong>Name:</strong> {props.name}
+              </p>
+              <p>
+                <strong>Age:</strong> {props.age}
+              </p>
+              <p>
+                <strong>Email:</strong> {props.email}
+              </p>
+              <p>
+                <strong>Mobile No:</strong> {props.mobileNo}
+              </p>
+              <p>
+                <strong>City:</strong> {props.city}
+              </p>
+            </div>
           </div>
-          <div className="card-body">
-            <p><span>Age:</span> {age}</p>
-            <p><span>Email:</span> {email}</p>
-            <p><span>Mobile No:</span> {mobileNo}</p>
-          </div>
-        </div>
-      );
-    };
-
-    // App Component
-    const App = () => {
-      const user = {
-        name: 'Parth',
-        age: 23,
-        email: 'parth15@gmail.com',
-        mobileNo: '123-456-7890',
-        city: 'Ahmedabad'
+        );
       };
 
-      return (
-        <div className="app-container">
-          <UserDetails
-            name={user.name}
-            age={user.age}
-            email={user.email}
-            mobileNo={user.mobileNo}
-            city={user.city}
-          />
-        </div>
-      );
-    };
+      // App Component
+      const App = () => {
+        const user = {
+          name: "Parth",
+          age: 23,
+          email: "parth15@gmail.com",
+          mobileNo: "123-456-7890",
+          city: "Ahmedabad",
+        };
 
-    // Render App Component
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
-  </script>
-</body>
+        return (
+          <div className="app-container">
+            <UserDetails
+              name={user.name}
+              age={user.age}
+              email={user.email}
+              mobileNo={user.mobileNo}
+              city={user.city}
+            />
+          </div>
+        );
+      };
+
+      // Render App Component
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
 </html>
