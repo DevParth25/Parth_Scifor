@@ -1,0 +1,77 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* App container */
+  .app-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+  }
+  
+  /* User details card */
+  .user-details-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .user-details-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Card header */
+  .card-header {
+    background: linear-gradient(135deg, #42a5f5, #1e88e5);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .card-header p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  /* Card body */
+  .card-body {
+    padding: 20px;
+    color: #333;
+  }
+  
+  .card-body p {
+    margin: 10px 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-body span {
+    font-weight: bold;
+    color: #1e88e5;
+  }
+  
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .app-container {
+      padding: 0 10px;
+    }
+  }
+  
