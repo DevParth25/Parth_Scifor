@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React State Update with Details</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- React and ReactDOM CDN Links -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel CDN Link -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    class Component extends React.Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+          name: "Parth",
+          lname: "Panchal",
+          age: 25,
+          occupation: "Software Engineer",
+          location: "Ahmedabad, India"
+        };
+      }
+
+      handleChangeState = () => {
+        this.setState({
+          name: "Jane",
+          lname: "Smith",
+          age: 30,
+          occupation: "Product Manager",
+          location: "New York, NY"
+        });
+      };
+
+      render() {
+        return (
+          <div className="container">
+            <h1 className="title">React State Change</h1>
+            <div className="card">
+              <p><strong>First Name:</strong> {this.state.name}</p>
+              <p><strong>Last Name:</strong> {this.state.lname}</p>
+              <p><strong>Age:</strong> {this.state.age}</p>
+              <p><strong>Occupation:</strong> {this.state.occupation}</p>
+              <p><strong>Location:</strong> {this.state.location}</p>
+            </div>
+            <button onClick={this.handleChangeState} className="btn">Change State</button>
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render(<Component />, document.getElementById("root"));
+  </script>
+</body>
+</html>
