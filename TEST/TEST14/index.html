@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odd/Even & Factorial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Odd/Even Section -->
+    <div id="odd-even">
+      <h2>Odd or Even Checker</h2>
+      <input type="number" id="numberInput" placeholder="Enter a number">
+      <button onclick="checkOddEven()">Check</button>
+      <p id="result"></p>
+    </div>
+
+    <!-- Factorial Section -->
+    <div id="factorial">
+      <h2>Factorial Calculator</h2>
+      <input type="number" id="factorialInput" placeholder="Enter a number">
+      <button onclick="calculateFactorial()">Calculate</button>
+      <p id="factorialResult"></p>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for Odd/Even Checker
+    function checkOddEven() {
+      const number = parseInt(document.getElementById('numberInput').value);
+      const result = number % 2 === 0 ? 'Even' : 'Odd';
+      document.getElementById('result').innerText = `The number ${number} is ${result}.`;
+    }
+
+    // JavaScript for Factorial Calculator
+    function calculateFactorial() {
+      const number = parseInt(document.getElementById('factorialInput').value);
+      if (number < 0) {
+        document.getElementById('factorialResult').innerText = 'Factorial is not defined for negative numbers.';
+        return;
+      }
+
+      let factorial = 1;
+      for (let i = 1; i <= number; i++) {
+        factorial *= i;
+      }
+      document.getElementById('factorialResult').innerText = `The factorial of ${number} is ${factorial}.`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+/* style.css */
+
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f3;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* General container styling */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 20px;
+    justify-content: center;
+  }
+  
+  /* Section Styling */
+  section {
+    flex: 1 1 45%;
+    max-width: 500px;
+    min-width: 300px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  section:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Heading Styling */
+  section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #0077b6;
+    text-align: center;
+  }
+  
+  /* Input Styling */
+  section input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Button Styling */
+  section button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #0288d1;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  section button:hover {
+    background: #005f9e;
+  }
+  
+  /* Result Text Styling */
+  section p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  /* Odd/Even Section Specific Styling */
+  #odd-even {
+    border-top: 5px solid #76c893;
+  }
+  
+  /* Factorial Section Specific Styling */
+  #factorial {
+    border-top: 5px solid #f4a261;
+  }
+  
