@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+/* Uppercase Section */
+#uppercaseSection {
+    border: 2px solid #007BFF;
+}
+
+#uppercaseSection button {
+    background-color: #007BFF;
+    color: white;
+}
+
+#uppercaseSection button:hover {
+    background-color: #0056b3;
+}
+
+/* Lowercase Section */
+#lowercaseSection {
+    border: 2px solid #28A745;
+}
+
+#lowercaseSection button {
+    background-color: #28A745;
+    color: white;
+}
+
+#lowercaseSection button:hover {
+    background-color: #1e7e34;
+}
+
+/* Substring Section */
+#substringSection {
+    border: 2px solid #FFC107;
+}
+
+#substringSection button {
+    background-color: #FFC107;
+    color: white;
+}
+
+#substringSection button:hover {
+    background-color: #e0a800;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+p {
+    margin: 10px 0 0;
+}
