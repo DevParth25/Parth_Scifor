@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redux Login System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/8.0.5/react-redux.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.3/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // Redux Actions
+        const LOGIN = "LOGIN";
+        const LOGOUT = "LOGOUT";
+
+        const loginAction = (userData) => ({ type: LOGIN, payload: userData });
+        const logoutAction = () => ({ type: LOGOUT });
+
+        // Redux Reducer
+        const initialState = { isAuthenticated: false, user: null };
+
+        function authReducer(state = initialState, action) {
+            switch (action.type) {
+                case LOGIN:
+                    return { isAuthenticated: true, user: action.payload };
+                case LOGOUT:
+                    return { isAuthenticated: false, user: null };
+                default:
+                    return state;
+            }
+        }
+
+        // Redux Store
+        const store = Redux.createStore(authReducer);
+
+        // React Components
+        const App = () => {
+            const { isAuthenticated, user } = ReactRedux.useSelector(state => state);
+            const dispatch = ReactRedux.useDispatch();
+            const [name, setName] = React.useState("");
+            const [email, setEmail] = React.useState("");
+            const [password, setPassword] = React.useState("");
+            const [error, setError] = React.useState("");
+
+            const handleLogin = () => {
+                if (!name || !email || !password) {
+                    setError("All fields are required!");
+                    return;
+                }
+                setError("");
+                dispatch(loginAction({ name, email }));
+            };
+
+            const handleLogout = () => {
+                setName("");
+                setEmail("");
+                setPassword("");
+                dispatch(logoutAction());
+            };
+
+            return (
+                <div>
+                    {!isAuthenticated && (
+                        <h1>Login</h1>
+                    )}
+                    {isAuthenticated ? (
+                        <div>
+                            <h2>Welcome, {user.name}!</h2>
+                            <p>Email: {user.email}</p>
+                            <button onClick={handleLogout}>Logout</button>
+                        </div>
+                    ) : (
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="Name"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                            {error && <p className="error">{error}</p>}
+                            <button onClick={handleLogin}>Login</button>
+                        </div>
+                    )}
+                </div>
+            );
+        };
+
+        const { Provider } = ReactRedux;
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(
+            <Provider store={store}>
+                <App />
+            </Provider>
+        );
+    </script>
+</body>
+</html>
