@@ -1,0 +1,30 @@
+/* Basic styling for the AngularJS page */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 350px;
+    padding: 20px;
+    background: #ffffff;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}

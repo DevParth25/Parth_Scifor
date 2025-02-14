@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS Example</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AngularJS CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+    <div class="container" ng-app="" ng-init="message='Welcome to Angular!'">
+        <h2 ng-bind="message"></h2>
+
+        <p>Enter Your Name: <input type="text" ng-model="name" placeholder="Your Name"></p>
+        
+        <p>Hello, {{ name }}!</p>
+
+        <p ng-bind="'Hello, Angular Learner!'"></p>
+    </div>
+
+</body>
+</html>
